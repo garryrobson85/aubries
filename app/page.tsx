@@ -76,24 +76,26 @@ const faqs = [
 export default function HomePage() {
   return (
     <main className="min-h-screen overflow-x-hidden bg-[#f4f1ec] text-[#171717]">
-      <header className="sticky top-0 z-40 border-b border-black/10 bg-[#f4f1ec]/92 backdrop-blur">
+      <header className="sticky top-0 z-40 border-b border-[#f05a1a]/35 bg-black/95 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-2.5 sm:gap-4 sm:px-8 sm:py-3">
-          <Link href="#top" className="flex items-center gap-3 font-bold tracking-wide text-[#171717]">
-            <img src={`${assetPath}/aubries-logo-512.webp`} alt="" width={44} height={44} className="rounded-full sm:h-12 sm:w-12" />
-            <span className="leading-tight">
-              <span className="block text-sm uppercase text-[#f05a1a]">Aubries</span>
-              <span className="block max-w-[10rem] text-xs sm:max-w-none sm:text-sm">Handyman & Maintenance</span>
-            </span>
+          <Link href="#top" className="flex min-w-0 items-center" aria-label="Aubries Handyman and Maintenance home">
+            <img
+              src={`${assetPath}/aubries-header-lower-logo-black-520.webp`}
+              alt="Aubries Handyman and Maintenance"
+              width={520}
+              height={147}
+              className="h-12 w-auto object-contain sm:h-16 lg:h-[4.5rem]"
+            />
           </Link>
-          <nav className="hidden items-center gap-6 text-sm font-semibold md:flex">
-            <Link href="#services" className="hover:text-[#d9480f]">Services</Link>
-            <Link href="#work" className="hover:text-[#d9480f]">Work</Link>
-            <Link href="#about" className="hover:text-[#d9480f]">About</Link>
-            <Link href="#contact" className="hover:text-[#d9480f]">Contact</Link>
+          <nav className="hidden items-center gap-6 text-sm font-semibold text-white/78 md:flex">
+            <Link href="#services" className="hover:text-[#f05a1a]">Services</Link>
+            <Link href="#work" className="hover:text-[#f05a1a]">Work</Link>
+            <Link href="#about" className="hover:text-[#f05a1a]">About</Link>
+            <Link href="#contact" className="hover:text-[#f05a1a]">Contact</Link>
           </nav>
           <Link
             href={phoneHref}
-            className="inline-flex min-h-10 items-center gap-2 rounded-full bg-[#171717] px-3 text-sm font-bold text-white shadow-lg shadow-black/20 transition hover:bg-[#d9480f] sm:min-h-11 sm:px-4"
+            className="inline-flex min-h-10 shrink-0 items-center gap-2 rounded-full bg-[#171717] px-3 text-sm font-bold text-white shadow-lg shadow-[#f05a1a]/15 ring-1 ring-white/10 transition hover:bg-[#d9480f] sm:min-h-11 sm:px-4"
           >
             <Phone size={17} aria-hidden="true" />
             <span className="hidden sm:inline">{phoneDisplay}</span>

@@ -5,7 +5,7 @@
 import { Volume2 } from "lucide-react";
 import { useCallback, useRef, useState } from "react";
 
-const logoSrc = "/aubries/aubries/aubries-logo-512.webp";
+const logoSrc = "/aubries/aubries/aubries-circle-logo-transparent-512.webp";
 
 export function AubriesLogo() {
   const [soundOn, setSoundOn] = useState(true);
