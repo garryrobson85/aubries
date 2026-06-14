@@ -1,0 +1,82 @@
+"use client";
+
+import Image from "next/image";
+import { Volume2 } from "lucide-react";
+import { useCallback, useRef, useState } from "react";
+
+export function AubriesLogo() {
+  const [soundOn, setSoundOn] = useState(true);
+  const audioContext = useRef<AudioContext | null>(null);
+  const lastPlayed = useRef(0);
+
+  const playChime = useCallback(() => {
+    if (!soundOn || typeof window === "undefined") return;
+
+    const now = Date.now();
+    if (now - lastPlayed.current < 900) return;
+    lastPlayed.current = now;
+
+    const AudioContextCtor = window.AudioContext || window.webkitAudioContext;
+    if (!AudioContextCtor) return;
+
+    const context = audioContext.current || new AudioContextCtor();
+    audioContext.current = context;
+
+    const master = context.createGain();
+    master.gain.setValueAtTime(0.0001, context.currentTime);
+    master.gain.exponentialRampToValueAtTime(0.09, context.currentTime + 0.02);
+    master.gain.exponentialRampToValueAtTime(0.0001, context.currentTime + 0.42);
+    master.connect(context.destination);
+
+    [392, 523.25, 659.25].forEach((frequency, index) => {
+      const oscillator = context.createOscillator();
+      const gain = context.createGain();
+      oscillator.type = "sine";
+      oscillator.frequency.setValueAtTime(frequency, context.currentTime + index * 0.045);
+      gain.gain.setValueAtTime(0.0001, context.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.45, context.currentTime + 0.03 + index * 0.045);
+      gain.gain.exponentialRampToValueAtTime(0.0001, context.currentTime + 0.25 + index * 0.045);
+      oscillator.connect(gain).connect(master);
+      oscillator.start(context.currentTime + index * 0.045);
+      oscillator.stop(context.currentTime + 0.36 + index * 0.045);
+    });
+  }, [soundOn]);
+
+  return (
+    <div className="relative mx-auto h-64 w-64 sm:h-80 sm:w-80 lg:h-[27rem] lg:w-[27rem]">
+      <button
+        type="button"
+        onMouseEnter={playChime}
+        onFocus={playChime}
+        onClick={playChime}
+        className="logo-pop group absolute inset-0 rounded-full outline-none"
+        aria-label="Aubries Handyman and Maintenance logo"
+      >
+        <span className="absolute -inset-5 rounded-full bg-[#ff5a12]/20 blur-2xl transition duration-500 group-hover:bg-[#ff5a12]/35" />
+        <Image
+          src="/aubries/aubries-logo-512.webp"
+          alt="Aubries Handyman and Maintenance logo"
+          fill
+          priority
+          sizes="(min-width: 1024px) 27rem, (min-width: 640px) 20rem, 16rem"
+          className="relative rounded-full object-contain drop-shadow-[0_24px_48px_rgba(12,12,12,0.36)] transition duration-500 group-hover:scale-105 group-hover:drop-shadow-[0_0_42px_rgba(255,90,18,0.82)]"
+        />
+      </button>
+      <button
+        type="button"
+        onClick={() => setSoundOn((value) => !value)}
+        className="absolute bottom-4 right-4 z-10 grid size-11 place-items-center rounded-full border border-white/20 bg-black/70 text-white shadow-lg transition hover:bg-[#ff5a12]"
+        aria-label={soundOn ? "Turn logo sound off" : "Turn logo sound on"}
+        title={soundOn ? "Sound on" : "Sound off"}
+      >
+        <Volume2 size={20} aria-hidden="true" className={soundOn ? "" : "opacity-35"} />
+      </button>
+    </div>
+  );
+}
+
+declare global {
+  interface Window {
+    webkitAudioContext?: typeof AudioContext;
+  }
+}
