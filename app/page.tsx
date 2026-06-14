@@ -77,21 +77,21 @@ export default function HomePage() {
   return (
     <main className="min-h-screen overflow-x-hidden bg-[#f4f1ec] text-[#171717]">
       <header className="sticky top-0 z-40 border-b border-[#f05a1a]/35 bg-black/95 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-2.5 sm:gap-4 sm:px-8 sm:py-3">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-2 sm:gap-4 sm:px-8 sm:py-2.5">
           <Link href="#top" className="flex min-w-0 items-center" aria-label="Aubries Handyman and Maintenance home">
             <img
               src={`${assetPath}/aubries-header-lower-logo-black-520.webp`}
               alt="Aubries Handyman and Maintenance"
               width={520}
               height={147}
-              className="h-12 w-auto object-contain sm:h-16 lg:h-[4.5rem]"
+              className="h-11 w-auto object-contain sm:h-14 lg:h-16"
             />
           </Link>
-          <nav className="hidden items-center gap-6 text-sm font-semibold text-white/78 md:flex">
-            <Link href="#services" className="hover:text-[#f05a1a]">Services</Link>
-            <Link href="#work" className="hover:text-[#f05a1a]">Work</Link>
-            <Link href="#about" className="hover:text-[#f05a1a]">About</Link>
-            <Link href="#contact" className="hover:text-[#f05a1a]">Contact</Link>
+          <nav className="hidden items-center gap-2 text-sm font-bold text-white md:flex">
+            <Link href="#services" className="rounded-full px-4 py-2 text-white/90 transition hover:bg-white/10 hover:text-[#f05a1a]">Services</Link>
+            <Link href="#work" className="rounded-full px-4 py-2 text-white/90 transition hover:bg-white/10 hover:text-[#f05a1a]">Work</Link>
+            <Link href="#about" className="rounded-full px-4 py-2 text-white/90 transition hover:bg-white/10 hover:text-[#f05a1a]">About</Link>
+            <Link href="#contact" className="rounded-full px-4 py-2 text-white/90 transition hover:bg-white/10 hover:text-[#f05a1a]">Contact</Link>
           </nav>
           <Link
             href={phoneHref}
@@ -109,7 +109,7 @@ export default function HomePage() {
           <img src={`${assetPath}/site-image-1.webp`} alt="" className="h-full w-full object-cover" />
         </div>
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.94),rgba(0,0,0,0.72),rgba(0,0,0,0.36))]" />
-        <div className="relative mx-auto grid min-h-[calc(100svh-73px)] max-w-7xl items-center gap-6 px-6 py-8 sm:px-8 sm:py-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-10 lg:px-10 lg:py-20">
+        <div className="relative mx-auto grid min-h-[calc(100svh-64px)] max-w-7xl items-center gap-4 px-6 py-6 sm:px-8 sm:py-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-8 lg:px-10 lg:py-12">
           <div className="order-2 max-w-3xl lg:order-1">
             <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-bold text-[#ffb088] sm:mb-5 sm:text-sm">
               <ShieldCheck size={17} aria-hidden="true" />
@@ -146,7 +146,7 @@ export default function HomePage() {
               ))}
             </dl>
           </div>
-          <div className="order-1 lg:order-2">
+          <div className="order-1 self-start pt-1 sm:pt-2 lg:order-2 lg:self-center lg:pt-0">
             <AubriesLogo />
           </div>
         </div>
