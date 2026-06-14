@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -16,6 +15,8 @@ import {
   Wrench
 } from "lucide-react";
 import { AubriesLogo } from "@/components/aubries-logo";
+
+/* eslint-disable @next/next/no-img-element */
 
 const phoneDisplay = "07397 640534";
 const phoneHref = "tel:+447397640534";
@@ -49,11 +50,11 @@ const services = [
 ];
 
 const gallery = [
-  { src: "/aubries/site-image-1.webp", alt: "Aubries handyman work van and maintenance service image", tall: true },
-  { src: "/aubries/site-image-2.webp", alt: "Aubries handyman tools and home improvement work" },
-  { src: "/aubries/site-image-3.webp", alt: "Aubries property repair and maintenance project" },
-  { src: "/aubries/site-image-4.webp", alt: "Aubries electrical and household repair work" },
-  { src: "/aubries/site-image-5.webp", alt: "Aubries plumbing and practical home maintenance work" }
+  { src: "aubries/site-image-1.webp", alt: "Aubries handyman work van and maintenance service image", tall: true },
+  { src: "aubries/site-image-2.webp", alt: "Aubries handyman tools and home improvement work" },
+  { src: "aubries/site-image-3.webp", alt: "Aubries property repair and maintenance project" },
+  { src: "aubries/site-image-4.webp", alt: "Aubries electrical and household repair work" },
+  { src: "aubries/site-image-5.webp", alt: "Aubries plumbing and practical home maintenance work" }
 ];
 
 const faqs = [
@@ -77,7 +78,7 @@ export default function HomePage() {
       <header className="sticky top-0 z-40 border-b border-black/10 bg-[#f4f1ec]/92 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
           <Link href="#top" className="flex items-center gap-3 font-bold tracking-wide text-[#171717]">
-            <Image src="/aubries/aubries-logo-512.webp" alt="" width={48} height={48} className="rounded-full" />
+            <img src="aubries/aubries-logo-512.webp" alt="" width={48} height={48} className="rounded-full" />
             <span className="leading-tight">
               <span className="block text-sm uppercase text-[#f05a1a]">Aubries</span>
               <span className="block text-xs sm:text-sm">Handyman & Maintenance</span>
@@ -102,7 +103,7 @@ export default function HomePage() {
 
       <section id="top" className="relative isolate overflow-hidden bg-[#171717] text-white">
         <div className="absolute inset-0 opacity-25">
-          <Image src="/aubries/site-image-1.webp" alt="" fill priority sizes="100vw" className="object-cover" />
+          <img src="aubries/site-image-1.webp" alt="" className="h-full w-full object-cover" />
         </div>
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.94),rgba(0,0,0,0.72),rgba(0,0,0,0.36))]" />
         <div className="relative mx-auto grid min-h-[86vh] max-w-7xl items-center gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.08fr_0.92fr] lg:py-20">
@@ -191,12 +192,11 @@ export default function HomePage() {
             <div className="grid grid-cols-2 gap-3">
               {gallery.map((image, index) => (
                 <div key={image.src} className={image.tall ? "relative min-h-[29rem] overflow-hidden rounded-lg border border-black/10 bg-black sm:row-span-2" : "relative min-h-56 overflow-hidden rounded-lg border border-black/10 bg-black"}>
-                  <Image
+                  <img
                     src={image.src}
                     alt={image.alt}
-                    fill
-                    sizes={index === 0 ? "(min-width: 1024px) 360px, 50vw" : "(min-width: 1024px) 260px, 50vw"}
-                    className="object-cover transition duration-500 hover:scale-105"
+                    loading={index < 2 ? "eager" : "lazy"}
+                    className="h-full w-full object-cover transition duration-500 hover:scale-105"
                   />
                 </div>
               ))}

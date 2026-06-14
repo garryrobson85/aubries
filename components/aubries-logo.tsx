@@ -1,6 +1,7 @@
 "use client";
 
-import Image from "next/image";
+/* eslint-disable @next/next/no-img-element */
+
 import { Volume2 } from "lucide-react";
 import { useCallback, useRef, useState } from "react";
 
@@ -53,13 +54,12 @@ export function AubriesLogo() {
         aria-label="Aubries Handyman and Maintenance logo"
       >
         <span className="absolute -inset-5 rounded-full bg-[#ff5a12]/20 blur-2xl transition duration-500 group-hover:bg-[#ff5a12]/35" />
-        <Image
-          src="/aubries/aubries-logo-512.webp"
+        <img
+          src="aubries/aubries-logo-512.webp"
           alt="Aubries Handyman and Maintenance logo"
-          fill
-          priority
-          sizes="(min-width: 1024px) 27rem, (min-width: 640px) 20rem, 16rem"
-          className="relative rounded-full object-contain drop-shadow-[0_24px_48px_rgba(12,12,12,0.36)] transition duration-500 group-hover:scale-105 group-hover:drop-shadow-[0_0_42px_rgba(255,90,18,0.82)]"
+          width={512}
+          height={512}
+          className="relative h-full w-full rounded-full object-contain drop-shadow-[0_24px_48px_rgba(12,12,12,0.36)] transition duration-500 group-hover:scale-105 group-hover:drop-shadow-[0_0_42px_rgba(255,90,18,0.82)]"
         />
       </button>
       <button
