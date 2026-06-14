@@ -21,6 +21,7 @@ import { AubriesLogo } from "@/components/aubries-logo";
 const phoneDisplay = "07397 640534";
 const phoneHref = "tel:+447397640534";
 const email = "Aubriestoolandplanthire@gmail.com";
+const assetPath = "/aubries/aubries";
 
 const services = [
   {
@@ -50,11 +51,11 @@ const services = [
 ];
 
 const gallery = [
-  { src: "aubries/site-image-1.webp", alt: "Aubries handyman work van and maintenance service image", tall: true },
-  { src: "aubries/site-image-2.webp", alt: "Aubries handyman tools and home improvement work" },
-  { src: "aubries/site-image-3.webp", alt: "Aubries property repair and maintenance project" },
-  { src: "aubries/site-image-4.webp", alt: "Aubries electrical and household repair work" },
-  { src: "aubries/site-image-5.webp", alt: "Aubries plumbing and practical home maintenance work" }
+  { src: `${assetPath}/site-image-1.webp`, alt: "Aubries handyman work van and maintenance service image", tall: true },
+  { src: `${assetPath}/site-image-2.webp`, alt: "Aubries handyman tools and home improvement work" },
+  { src: `${assetPath}/site-image-3.webp`, alt: "Aubries property repair and maintenance project" },
+  { src: `${assetPath}/site-image-4.webp`, alt: "Aubries electrical and household repair work" },
+  { src: `${assetPath}/site-image-5.webp`, alt: "Aubries plumbing and practical home maintenance work" }
 ];
 
 const faqs = [
@@ -74,14 +75,14 @@ const faqs = [
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-[#f4f1ec] text-[#171717]">
+    <main className="min-h-screen overflow-x-hidden bg-[#f4f1ec] text-[#171717]">
       <header className="sticky top-0 z-40 border-b border-black/10 bg-[#f4f1ec]/92 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-2.5 sm:gap-4 sm:px-8 sm:py-3">
           <Link href="#top" className="flex items-center gap-3 font-bold tracking-wide text-[#171717]">
-            <img src="aubries/aubries-logo-512.webp" alt="" width={48} height={48} className="rounded-full" />
+            <img src={`${assetPath}/aubries-logo-512.webp`} alt="" width={44} height={44} className="rounded-full sm:h-12 sm:w-12" />
             <span className="leading-tight">
               <span className="block text-sm uppercase text-[#f05a1a]">Aubries</span>
-              <span className="block text-xs sm:text-sm">Handyman & Maintenance</span>
+              <span className="block max-w-[10rem] text-xs sm:max-w-none sm:text-sm">Handyman & Maintenance</span>
             </span>
           </Link>
           <nav className="hidden items-center gap-6 text-sm font-semibold md:flex">
@@ -92,7 +93,7 @@ export default function HomePage() {
           </nav>
           <Link
             href={phoneHref}
-            className="inline-flex min-h-11 items-center gap-2 rounded-full bg-[#171717] px-4 text-sm font-bold text-white shadow-lg shadow-black/20 transition hover:bg-[#d9480f]"
+            className="inline-flex min-h-10 items-center gap-2 rounded-full bg-[#171717] px-3 text-sm font-bold text-white shadow-lg shadow-black/20 transition hover:bg-[#d9480f] sm:min-h-11 sm:px-4"
           >
             <Phone size={17} aria-hidden="true" />
             <span className="hidden sm:inline">{phoneDisplay}</span>
@@ -103,22 +104,22 @@ export default function HomePage() {
 
       <section id="top" className="relative isolate overflow-hidden bg-[#171717] text-white">
         <div className="absolute inset-0 opacity-25">
-          <img src="aubries/site-image-1.webp" alt="" className="h-full w-full object-cover" />
+          <img src={`${assetPath}/site-image-1.webp`} alt="" className="h-full w-full object-cover" />
         </div>
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.94),rgba(0,0,0,0.72),rgba(0,0,0,0.36))]" />
-        <div className="relative mx-auto grid min-h-[86vh] max-w-7xl items-center gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.08fr_0.92fr] lg:py-20">
-          <div className="max-w-3xl">
-            <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-bold text-[#ffb088]">
+        <div className="relative mx-auto grid min-h-[calc(100svh-73px)] max-w-7xl items-center gap-6 px-6 py-8 sm:px-8 sm:py-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-10 lg:px-10 lg:py-20">
+          <div className="order-2 max-w-3xl lg:order-1">
+            <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-bold text-[#ffb088] sm:mb-5 sm:text-sm">
               <ShieldCheck size={17} aria-hidden="true" />
               Fully insured handyman services in Upton, Pontefract
             </p>
-            <h1 className="text-4xl font-black leading-[1.02] tracking-normal sm:text-6xl lg:text-7xl">
+            <h1 className="max-w-[12ch] text-4xl font-black leading-[1.02] tracking-normal sm:text-6xl lg:text-7xl">
               Affordable Handyman & Maintenance Services
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-white/82">
+            <p className="mt-5 max-w-2xl text-base leading-7 text-white/82 sm:mt-6 sm:text-lg sm:leading-8">
               Aubries Handyman & Maintenance provides professional, budget-friendly repairs, plumbing solutions, electrician services and home improvement work with quality service and a personal touch.
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
               <Link
                 href={phoneHref}
                 className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#f05a1a] px-6 text-sm font-black uppercase tracking-wide text-white shadow-xl shadow-[#f05a1a]/25 transition hover:-translate-y-0.5 hover:bg-[#ff6a26]"
@@ -134,7 +135,7 @@ export default function HomePage() {
                 Email Aubries
               </Link>
             </div>
-            <dl className="mt-10 grid gap-3 text-sm text-white/85 sm:grid-cols-3">
+            <dl className="mt-8 grid gap-3 text-sm text-white/85 sm:mt-10 sm:grid-cols-3">
               {["Electrician Services", "Plumbing Solutions", "Home Improvement"].map((item) => (
                 <div key={item} className="rounded-lg border border-white/12 bg-white/8 p-4">
                   <dt className="font-bold text-white">{item}</dt>
@@ -143,7 +144,9 @@ export default function HomePage() {
               ))}
             </dl>
           </div>
-          <AubriesLogo />
+          <div className="order-1 lg:order-2">
+            <AubriesLogo />
+          </div>
         </div>
       </section>
 

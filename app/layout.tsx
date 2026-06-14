@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-const siteUrl = "https://www.aubrieshandyman.co.uk";
+const siteUrl = "https://garryrobson85.github.io/aubries";
 const businessName = "Aubries Handyman & Maintenance";
 const phone = "+44 7397 640534";
 const email = "Aubriestoolandplanthire@gmail.com";
+const githubLogo = `${siteUrl}/aubries/aubries-logo-512.png`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
       "Budget-friendly, fully insured handyman, plumbing, electrical and home improvement services based in Upton, Pontefract.",
     images: [
       {
-        url: "/aubries/aubries-logo-512.png",
+        url: githubLogo,
         width: 512,
         height: 512,
         alt: "Aubries Handyman & Maintenance logo"
@@ -51,7 +52,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Aubries Handyman & Maintenance",
     description: "Affordable handyman and maintenance services in Upton, Pontefract.",
-    images: ["/aubries/aubries-logo-512.png"]
+    images: [githubLogo]
   },
   robots: {
     index: true,
@@ -65,8 +66,8 @@ export const metadata: Metadata = {
     }
   },
   icons: {
-    icon: "/aubries/aubries-logo-512.png",
-    apple: "/aubries/aubries-logo-512.png"
+    icon: "/aubries/aubries/aubries-logo-512.png",
+    apple: "/aubries/aubries/aubries-logo-512.png"
   }
 };
 
@@ -78,8 +79,8 @@ const structuredData = {
       "@id": `${siteUrl}/#business`,
       name: businessName,
       url: siteUrl,
-      image: `${siteUrl}/aubries/aubries-logo-512.png`,
-      logo: `${siteUrl}/aubries/aubries-logo-512.png`,
+      image: githubLogo,
+      logo: githubLogo,
       telephone: phone,
       email,
       description:

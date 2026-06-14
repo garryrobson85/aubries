@@ -5,6 +5,8 @@
 import { Volume2 } from "lucide-react";
 import { useCallback, useRef, useState } from "react";
 
+const logoSrc = "/aubries/aubries/aubries-logo-512.webp";
+
 export function AubriesLogo() {
   const [soundOn, setSoundOn] = useState(true);
   const audioContext = useRef<AudioContext | null>(null);
@@ -44,7 +46,7 @@ export function AubriesLogo() {
   }, [soundOn]);
 
   return (
-    <div className="relative mx-auto h-64 w-64 sm:h-80 sm:w-80 lg:h-[27rem] lg:w-[27rem]">
+    <div className="relative mx-auto h-44 w-44 sm:h-72 sm:w-72 lg:h-[27rem] lg:w-[27rem]">
       <button
         type="button"
         onMouseEnter={playChime}
@@ -53,9 +55,9 @@ export function AubriesLogo() {
         className="logo-pop group absolute inset-0 rounded-full outline-none"
         aria-label="Aubries Handyman and Maintenance logo"
       >
-        <span className="absolute -inset-5 rounded-full bg-[#ff5a12]/20 blur-2xl transition duration-500 group-hover:bg-[#ff5a12]/35" />
+        <span className="absolute -inset-3 rounded-full bg-[#ff5a12]/20 blur-2xl transition duration-500 group-hover:bg-[#ff5a12]/35 sm:-inset-5" />
         <img
-          src="aubries/aubries-logo-512.webp"
+          src={logoSrc}
           alt="Aubries Handyman and Maintenance logo"
           width={512}
           height={512}
@@ -65,7 +67,7 @@ export function AubriesLogo() {
       <button
         type="button"
         onClick={() => setSoundOn((value) => !value)}
-        className="absolute bottom-4 right-4 z-10 grid size-11 place-items-center rounded-full border border-white/20 bg-black/70 text-white shadow-lg transition hover:bg-[#ff5a12]"
+        className="absolute bottom-2 right-2 z-10 grid size-10 place-items-center rounded-full border border-white/20 bg-black/70 text-white shadow-lg transition hover:bg-[#ff5a12] sm:bottom-4 sm:right-4 sm:size-11"
         aria-label={soundOn ? "Turn logo sound off" : "Turn logo sound on"}
         title={soundOn ? "Sound on" : "Sound off"}
       >
