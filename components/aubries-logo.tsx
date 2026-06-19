@@ -5,7 +5,7 @@
 import { Volume2 } from "lucide-react";
 import { useCallback, useRef, useState } from "react";
 
-const logoSrc = "/aubries/aubries/aubries-circle-logo-transparent-512.webp";
+const logoSrc = "/aubries/aubries/aubries-rustic-logo-768.webp";
 
 export function AubriesLogo() {
   const [soundOn, setSoundOn] = useState(true);
@@ -46,7 +46,7 @@ export function AubriesLogo() {
   }, [soundOn]);
 
   return (
-    <div className="relative mx-auto h-44 w-44 sm:h-72 sm:w-72 lg:h-[23rem] lg:w-[23rem] xl:h-[25rem] xl:w-[25rem]">
+    <div className="relative mx-auto h-56 w-56 sm:h-80 sm:w-80 lg:h-[28rem] lg:w-[28rem]">
       <button
         type="button"
         onMouseEnter={playChime}
@@ -55,13 +55,13 @@ export function AubriesLogo() {
         className="logo-pop group absolute inset-0 rounded-full outline-none"
         aria-label="Aubries Handyman and Maintenance logo"
       >
-        <span className="absolute -inset-3 rounded-full bg-[#ff5a12]/20 blur-2xl transition duration-500 group-hover:bg-[#ff5a12]/35 sm:-inset-5" />
+        <span className="absolute -inset-4 rounded-full bg-[#d97706]/25 blur-2xl transition duration-500 group-hover:bg-[#f97316]/40 sm:-inset-6" />
         <img
           src={logoSrc}
           alt="Aubries Handyman and Maintenance logo"
           width={512}
           height={512}
-          className="relative h-full w-full rounded-full object-contain drop-shadow-[0_24px_48px_rgba(12,12,12,0.36)] transition duration-500 group-hover:scale-105 group-hover:drop-shadow-[0_0_42px_rgba(255,90,18,0.82)]"
+          className="relative h-full w-full object-contain drop-shadow-[0_28px_42px_rgba(0,0,0,0.48)] transition duration-500 group-hover:scale-105 group-hover:drop-shadow-[0_0_42px_rgba(217,119,6,0.72)]"
         />
       </button>
       <button

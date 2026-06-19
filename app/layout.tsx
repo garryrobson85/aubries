@@ -5,7 +5,7 @@ const siteUrl = "https://garryrobson85.github.io/aubries";
 const businessName = "Aubries Handyman & Maintenance";
 const phone = "+44 7397 640534";
 const email = "Aubriestoolandplanthire@gmail.com";
-const githubLogo = `${siteUrl}/aubries/aubries-circle-logo-transparent-512.png`;
+const githubLogo = `${siteUrl}/aubries/aubries-rustic-logo-512.png`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -66,8 +66,8 @@ export const metadata: Metadata = {
     }
   },
   icons: {
-    icon: "/aubries/aubries/aubries-circle-logo-transparent-512.png",
-    apple: "/aubries/aubries/aubries-circle-logo-transparent-512.png"
+    icon: "/aubries/aubries/aubries-rustic-logo-512.png",
+    apple: "/aubries/aubries/aubries-rustic-logo-512.png"
   }
 };
 

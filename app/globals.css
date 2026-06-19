@@ -12,8 +12,8 @@ html {
 
 body {
   margin: 0;
-  background: #f4f1ec;
-  color: #171717;
+  background: #1c120b;
+  color: #21160f;
   text-rendering: optimizeLegibility;
 }
 
@@ -42,6 +42,23 @@ button {
 
 .service-card {
   will-change: transform;
+}
+
+.wood-grain {
+  background-image:
+    linear-gradient(100deg, rgba(255, 255, 255, 0.05), transparent 24%, rgba(0, 0, 0, 0.24) 52%, transparent 78%),
+    repeating-linear-gradient(8deg, rgba(184, 104, 34, 0.22) 0 2px, rgba(36, 19, 8, 0.16) 2px 7px, rgba(255, 193, 121, 0.06) 7px 10px),
+    radial-gradient(circle at 22% 18%, rgba(246, 160, 61, 0.16), transparent 30%),
+    radial-gradient(circle at 74% 64%, rgba(95, 46, 16, 0.38), transparent 36%);
+  background-size: 420px 420px, 160px 160px, 620px 620px, 720px 720px;
+}
+
+.wood-grain-light {
+  background-image:
+    linear-gradient(100deg, rgba(255, 255, 255, 0.32), transparent 25%, rgba(98, 47, 18, 0.16) 58%, transparent 80%),
+    repeating-linear-gradient(7deg, rgba(122, 66, 28, 0.18) 0 2px, rgba(255, 247, 234, 0.42) 2px 9px, rgba(184, 104, 34, 0.12) 9px 13px),
+    radial-gradient(circle at 20% 24%, rgba(255, 255, 255, 0.42), transparent 28%);
+  background-size: 420px 420px, 140px 140px, 620px 620px;
 }
 
 @keyframes logo-pop-flip {

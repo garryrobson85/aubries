@@ -75,27 +75,32 @@ const faqs = [
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-[#f4f1ec] text-[#171717]">
-      <header className="sticky top-0 z-40 border-b border-[#f05a1a]/35 bg-black/95 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-2 sm:gap-4 sm:px-8 sm:py-2.5">
-          <Link href="#top" className="flex min-w-0 items-center" aria-label="Aubries Handyman and Maintenance home">
+    <main className="min-h-screen overflow-x-hidden bg-[#1c120b] text-[#21160f]">
+      <header className="sticky top-0 z-40 border-b border-[#b86822]/50 bg-[#090705]/96 shadow-[0_10px_30px_rgba(0,0,0,0.38)] backdrop-blur">
+        <div className="absolute inset-0 opacity-25 wood-grain" />
+        <div className="relative mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-2 sm:gap-4 sm:px-8 sm:py-2.5">
+          <Link href="#top" className="flex min-w-0 items-center gap-3" aria-label="Aubries Handyman and Maintenance home">
             <img
-              src={`${assetPath}/aubries-header-lower-logo-black-520.webp`}
+              src={`${assetPath}/aubries-rustic-logo-header-120.webp`}
               alt="Aubries Handyman and Maintenance"
-              width={520}
-              height={147}
-              className="h-11 w-auto object-contain sm:h-14 lg:h-16"
+              width={120}
+              height={117}
+              className="h-14 w-auto object-contain drop-shadow-[0_0_16px_rgba(217,119,6,0.34)] sm:h-16"
             />
+            <span className="hidden leading-tight sm:block">
+              <span className="block text-lg font-black uppercase tracking-wide text-[#f6a03d]">Aubries</span>
+              <span className="block text-xs font-bold uppercase tracking-[0.24em] text-[#e8d8c0]">Handyman & Maintenance</span>
+            </span>
           </Link>
           <nav className="hidden items-center gap-2 text-sm font-bold text-white md:flex">
-            <Link href="#services" className="rounded-full px-4 py-2 text-white/90 transition hover:bg-white/10 hover:text-[#f05a1a]">Services</Link>
-            <Link href="#work" className="rounded-full px-4 py-2 text-white/90 transition hover:bg-white/10 hover:text-[#f05a1a]">Work</Link>
-            <Link href="#about" className="rounded-full px-4 py-2 text-white/90 transition hover:bg-white/10 hover:text-[#f05a1a]">About</Link>
-            <Link href="#contact" className="rounded-full px-4 py-2 text-white/90 transition hover:bg-white/10 hover:text-[#f05a1a]">Contact</Link>
+            <Link href="#services" className="rounded-full border border-transparent px-4 py-2 text-white/90 transition hover:border-[#b86822]/60 hover:bg-[#6b3414]/45 hover:text-[#f6a03d]">Services</Link>
+            <Link href="#work" className="rounded-full border border-transparent px-4 py-2 text-white/90 transition hover:border-[#b86822]/60 hover:bg-[#6b3414]/45 hover:text-[#f6a03d]">Work</Link>
+            <Link href="#about" className="rounded-full border border-transparent px-4 py-2 text-white/90 transition hover:border-[#b86822]/60 hover:bg-[#6b3414]/45 hover:text-[#f6a03d]">About</Link>
+            <Link href="#contact" className="rounded-full border border-transparent px-4 py-2 text-white/90 transition hover:border-[#b86822]/60 hover:bg-[#6b3414]/45 hover:text-[#f6a03d]">Contact</Link>
           </nav>
           <Link
             href={phoneHref}
-            className="inline-flex min-h-10 shrink-0 items-center gap-2 rounded-full bg-[#171717] px-3 text-sm font-bold text-white shadow-lg shadow-[#f05a1a]/15 ring-1 ring-white/10 transition hover:bg-[#d9480f] sm:min-h-11 sm:px-4"
+            className="inline-flex min-h-10 shrink-0 items-center gap-2 rounded-full bg-[#21130b] px-3 text-sm font-bold text-white shadow-lg shadow-[#b86822]/25 ring-1 ring-[#b86822]/45 transition hover:bg-[#9a4b18] sm:min-h-11 sm:px-4"
           >
             <Phone size={17} aria-hidden="true" />
             <span className="hidden sm:inline">{phoneDisplay}</span>
@@ -104,18 +109,19 @@ export default function HomePage() {
         </div>
       </header>
 
-      <section id="top" className="relative isolate overflow-hidden bg-[#171717] text-white">
-        <div className="absolute inset-0 opacity-25">
+      <section id="top" className="relative isolate overflow-hidden bg-[#120b06] text-white">
+        <div className="absolute inset-0 opacity-22">
           <img src={`${assetPath}/site-image-1.webp`} alt="" className="h-full w-full object-cover" />
         </div>
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.94),rgba(0,0,0,0.72),rgba(0,0,0,0.36))]" />
-        <div className="relative mx-auto grid min-h-[calc(100svh-64px)] max-w-7xl items-center gap-4 px-6 py-6 sm:px-8 sm:py-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-8 lg:px-10 lg:py-12">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_35%,rgba(184,104,34,0.34),transparent_34%),linear-gradient(90deg,rgba(13,7,3,0.98),rgba(22,12,6,0.88),rgba(12,8,5,0.68))]" />
+        <div className="absolute inset-0 opacity-35 wood-grain" />
+        <div className="relative mx-auto grid min-h-[calc(100svh-64px)] max-w-7xl items-center gap-4 px-6 py-6 sm:px-8 sm:py-10 lg:grid-cols-[1.02fr_0.98fr] lg:gap-8 lg:px-10 lg:py-12">
           <div className="order-2 max-w-3xl lg:order-1">
-            <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-bold text-[#ffb088] sm:mb-5 sm:text-sm">
+            <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#c9843a]/45 bg-[#2b180d]/80 px-4 py-2 text-xs font-bold text-[#f5c88d] shadow-[inset_0_1px_0_rgba(255,255,255,0.12)] sm:mb-5 sm:text-sm">
               <ShieldCheck size={17} aria-hidden="true" />
               Fully insured handyman services in Upton, Pontefract
             </p>
-            <h1 className="max-w-[12ch] text-4xl font-black leading-[1.02] tracking-normal sm:text-6xl lg:text-7xl">
+            <h1 className="max-w-[12ch] text-4xl font-black leading-[1.02] tracking-normal text-[#fff8ef] sm:text-6xl lg:text-7xl">
               Affordable Handyman & Maintenance Services
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-7 text-white/82 sm:mt-6 sm:text-lg sm:leading-8">
@@ -124,14 +130,14 @@ export default function HomePage() {
             <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
               <Link
                 href={phoneHref}
-                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#f05a1a] px-6 text-sm font-black uppercase tracking-wide text-white shadow-xl shadow-[#f05a1a]/25 transition hover:-translate-y-0.5 hover:bg-[#ff6a26]"
+                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#d97706] px-6 text-sm font-black uppercase tracking-wide text-white shadow-xl shadow-[#d97706]/25 ring-1 ring-[#f6c27a]/45 transition hover:-translate-y-0.5 hover:bg-[#f97316]"
               >
                 <Phone size={18} aria-hidden="true" />
                 Get a Quote
               </Link>
               <Link
                 href={`mailto:${email}`}
-                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/20 bg-white/10 px-6 text-sm font-black uppercase tracking-wide text-white transition hover:-translate-y-0.5 hover:bg-white/18"
+                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-[#c9843a]/45 bg-[#2b180d]/75 px-6 text-sm font-black uppercase tracking-wide text-white transition hover:-translate-y-0.5 hover:bg-[#43230f]"
               >
                 <Mail size={18} aria-hidden="true" />
                 Email Aubries
@@ -139,7 +145,7 @@ export default function HomePage() {
             </div>
             <dl className="mt-8 grid gap-3 text-sm text-white/85 sm:mt-10 sm:grid-cols-3">
               {["Electrician Services", "Plumbing Solutions", "Home Improvement"].map((item) => (
-                <div key={item} className="rounded-lg border border-white/12 bg-white/8 p-4">
+                <div key={item} className="rounded-lg border border-[#c9843a]/25 bg-[#1c1008]/72 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
                   <dt className="font-bold text-white">{item}</dt>
                   <dd className="mt-1">Reliable, local, affordable.</dd>
                 </div>
@@ -152,11 +158,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="services" className="border-y border-black/10 bg-white py-16 sm:py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+      <section id="services" className="relative border-y border-[#6b3414]/40 bg-[#ead7bd] py-16 sm:py-20">
+        <div className="absolute inset-0 opacity-40 wood-grain-light" />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
           <div className="grid gap-6 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
             <div>
-              <p className="text-sm font-black uppercase tracking-[0.18em] text-[#d9480f]">Our Services and Highlights</p>
+              <p className="text-sm font-black uppercase tracking-[0.18em] text-[#9a4b18]">Our Services and Highlights</p>
               <h2 className="mt-3 text-3xl font-black leading-tight sm:text-5xl">Reliable home repairs without the inflated price tag.</h2>
             </div>
             <p className="max-w-3xl text-lg leading-8 text-black/68">
@@ -165,8 +172,8 @@ export default function HomePage() {
           </div>
           <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
             {services.map((service) => (
-              <article key={service.title} className="service-card rounded-lg border border-black/10 bg-[#fbfaf7] p-6 shadow-sm transition hover:-translate-y-1 hover:border-[#f05a1a]/50 hover:shadow-xl">
-                <service.icon className="mb-5 size-10 text-[#f05a1a]" aria-hidden="true" />
+              <article key={service.title} className="service-card rounded-lg border border-[#7a421c]/25 bg-[#fff7ea]/88 p-6 shadow-[0_16px_36px_rgba(55,31,16,0.12)] transition hover:-translate-y-1 hover:border-[#b86822]/60 hover:shadow-xl">
+                <service.icon className="mb-5 size-10 text-[#9a4b18]" aria-hidden="true" />
                 <h3 className="text-xl font-black">{service.title}</h3>
                 <p className="mt-3 leading-7 text-black/68">{service.description}</p>
                 <p className="mt-5 text-xs font-bold uppercase tracking-wide text-black/45">{service.terms}</p>
@@ -176,19 +183,19 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="work" className="py-16 sm:py-20">
+      <section id="work" className="bg-[#21130b] py-16 text-[#fff8ef] sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
             <div>
-              <p className="text-sm font-black uppercase tracking-[0.18em] text-[#d9480f]">Current Site Imagery</p>
+              <p className="text-sm font-black uppercase tracking-[0.18em] text-[#f6a03d]">Current Site Imagery</p>
               <h2 className="mt-3 text-3xl font-black leading-tight sm:text-5xl">Practical work, tidy finishes, useful repairs.</h2>
-              <p className="mt-5 text-lg leading-8 text-black/68">
+              <p className="mt-5 text-lg leading-8 text-white/72">
                 From general maintenance to plumbing, electrical support and home improvement, Aubries focuses on straightforward service, fair pricing and dependable results around Pontefract.
               </p>
-              <div className="mt-8 grid gap-3 text-sm font-bold text-black/72 sm:grid-cols-2">
+              <div className="mt-8 grid gap-3 text-sm font-bold text-white/76 sm:grid-cols-2">
                 {["Quality services with a personal touch", "Budget-friendly maintenance", "Reused and repurposed materials", "Fully insured local service"].map((item) => (
                   <div key={item} className="flex items-center gap-2">
-                    <CheckCircle2 className="size-5 text-[#f05a1a]" aria-hidden="true" />
+                    <CheckCircle2 className="size-5 text-[#f6a03d]" aria-hidden="true" />
                     {item}
                   </div>
                 ))}
@@ -196,7 +203,7 @@ export default function HomePage() {
             </div>
             <div className="grid grid-cols-2 gap-3">
               {gallery.map((image, index) => (
-                <div key={image.src} className={image.tall ? "relative min-h-[29rem] overflow-hidden rounded-lg border border-black/10 bg-black sm:row-span-2" : "relative min-h-56 overflow-hidden rounded-lg border border-black/10 bg-black"}>
+                <div key={image.src} className={image.tall ? "relative min-h-[29rem] overflow-hidden rounded-lg border border-[#b86822]/35 bg-black shadow-[0_18px_40px_rgba(0,0,0,0.35)] sm:row-span-2" : "relative min-h-56 overflow-hidden rounded-lg border border-[#b86822]/35 bg-black shadow-[0_18px_40px_rgba(0,0,0,0.35)]"}>
                   <img
                     src={image.src}
                     alt={image.alt}
@@ -210,8 +217,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="about" className="bg-[#171717] py-16 text-white sm:py-20">
-        <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[1fr_0.85fr] lg:items-center">
+      <section id="about" className="relative bg-[#130b06] py-16 text-white sm:py-20">
+        <div className="absolute inset-0 opacity-30 wood-grain" />
+        <div className="relative mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[1fr_0.85fr] lg:items-center">
           <div>
             <p className="text-sm font-black uppercase tracking-[0.18em] text-[#ff8b4a]">Reliable & Affordable Services</p>
             <h2 className="mt-3 text-3xl font-black leading-tight sm:text-5xl">A local handyman for repairs that actually need doing.</h2>
@@ -225,7 +233,7 @@ export default function HomePage() {
               { icon: Recycle, title: "Sustainable approach", text: "Repurposed materials used where appropriate for value and reduced waste." },
               { icon: Sparkles, title: "Personal touch", text: "Friendly, direct communication and attention to the little details." }
             ].map((item) => (
-              <div key={item.title} className="rounded-lg border border-white/12 bg-white/8 p-5">
+              <div key={item.title} className="rounded-lg border border-[#b86822]/30 bg-[#2b180d]/78 p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
                 <item.icon className="mb-4 size-8 text-[#ff8b4a]" aria-hidden="true" />
                 <h3 className="text-lg font-black">{item.title}</h3>
                 <p className="mt-2 leading-7 text-white/70">{item.text}</p>
@@ -235,16 +243,16 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-white py-16 sm:py-20">
+      <section className="bg-[#ead7bd] py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
             <div>
-              <p className="text-sm font-black uppercase tracking-[0.18em] text-[#d9480f]">Search-Friendly Answers</p>
+              <p className="text-sm font-black uppercase tracking-[0.18em] text-[#9a4b18]">Search-Friendly Answers</p>
               <h2 className="mt-3 text-3xl font-black leading-tight sm:text-5xl">Handyman FAQs</h2>
             </div>
             <div className="grid gap-4">
               {faqs.map((faq) => (
-                <details key={faq.question} className="rounded-lg border border-black/10 bg-[#fbfaf7] p-5">
+                <details key={faq.question} className="rounded-lg border border-[#7a421c]/25 bg-[#fff7ea] p-5 shadow-sm">
                   <summary className="cursor-pointer text-lg font-black">{faq.question}</summary>
                   <p className="mt-3 leading-7 text-black/68">{faq.answer}</p>
                 </details>
@@ -254,8 +262,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="contact" className="bg-[#f05a1a] py-14 text-white">
-        <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 lg:grid-cols-[1fr_auto] lg:items-center">
+      <section id="contact" className="relative bg-[#9a4b18] py-14 text-white">
+        <div className="absolute inset-0 opacity-25 wood-grain" />
+        <div className="relative mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 lg:grid-cols-[1fr_auto] lg:items-center">
           <div>
             <h2 className="text-3xl font-black sm:text-5xl">Contact us for a quote.</h2>
             <div className="mt-5 grid gap-3 text-lg font-bold">
