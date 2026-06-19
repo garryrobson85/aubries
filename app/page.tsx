@@ -169,13 +169,25 @@ export default function HomePage() {
               Explore our range of services designed to meet your home improvement needs. We pride ourselves on quality, affordability and sustainability, including reused and repurposed materials where they are suitable for the job.
             </p>
           </div>
-          <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
             {services.map((service) => (
-              <article key={service.title} className="service-card rounded-lg border border-[#7a421c]/25 bg-[#fff7ea]/88 p-6 shadow-[0_16px_36px_rgba(55,31,16,0.12)] transition hover:-translate-y-1 hover:border-[#b86822]/60 hover:shadow-xl">
-                <service.icon className="mb-5 size-10 text-[#9a4b18]" aria-hidden="true" />
-                <h3 className="text-xl font-black">{service.title}</h3>
-                <p className="mt-3 leading-7 text-black/68">{service.description}</p>
-                <p className="mt-5 text-xs font-bold uppercase tracking-wide text-black/45">{service.terms}</p>
+              <article
+                key={service.title}
+                className="service-card group relative overflow-hidden rounded-lg border border-[#2b180d] bg-[#140c07] p-6 text-[#fff8ef] shadow-[0_22px_44px_rgba(47,25,10,0.24),inset_0_1px_0_rgba(255,255,255,0.12)] ring-1 ring-[#d97706]/25 transition duration-300 hover:-translate-y-1.5 hover:border-[#f6a03d] hover:shadow-[0_26px_54px_rgba(112,55,16,0.34),0_0_28px_rgba(217,119,6,0.24)]"
+              >
+                <span className="absolute inset-0 opacity-35 wood-grain" />
+                <span className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-[#7a421c] via-[#f97316] to-[#7a421c]" />
+                <span className="absolute left-3 top-3 size-3 rounded-full border border-black/70 bg-[radial-gradient(circle_at_35%_35%,#f8f1e7,#6f7375_36%,#181818_72%)] shadow-inner" />
+                <span className="absolute right-3 top-3 size-3 rounded-full border border-black/70 bg-[radial-gradient(circle_at_35%_35%,#f8f1e7,#6f7375_36%,#181818_72%)] shadow-inner" />
+                <span className="absolute -right-10 -top-12 size-28 rounded-full bg-[#f97316]/16 blur-2xl transition group-hover:bg-[#f97316]/28" />
+                <div className="relative">
+                  <div className="mb-6 grid size-16 place-items-center rounded-lg border border-[#f6a03d]/45 bg-[linear-gradient(145deg,#32190a,#0b0705)] text-[#f6a03d] shadow-[inset_0_1px_0_rgba(255,255,255,0.18),0_10px_24px_rgba(0,0,0,0.28)] transition group-hover:scale-105 group-hover:text-[#ffb65f]">
+                    <service.icon className="size-9" aria-hidden="true" />
+                  </div>
+                  <h3 className="text-xl font-black text-white">{service.title}</h3>
+                  <p className="mt-3 leading-7 text-white/76">{service.description}</p>
+                  <p className="mt-5 border-t border-[#f6a03d]/24 pt-4 text-xs font-black uppercase tracking-wide text-[#f5c88d]">{service.terms}</p>
+                </div>
               </article>
             ))}
           </div>
