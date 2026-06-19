@@ -51,8 +51,7 @@ const services = [
 ];
 
 const gallery = [
-  { src: `${assetPath}/site-image-1.webp`, alt: "Aubries handyman work van and maintenance service image", tall: true },
-  { src: `${assetPath}/site-image-2.webp`, alt: "Aubries handyman tools and home improvement work" },
+  { src: `${assetPath}/site-image-2.webp`, alt: "Aubries handyman tools and home improvement work", tall: true },
   { src: `${assetPath}/site-image-3.webp`, alt: "Aubries property repair and maintenance project" },
   { src: `${assetPath}/site-image-4.webp`, alt: "Aubries electrical and household repair work" },
   { src: `${assetPath}/site-image-5.webp`, alt: "Aubries plumbing and practical home maintenance work" }
@@ -111,7 +110,7 @@ export default function HomePage() {
 
       <section id="top" className="relative isolate overflow-hidden bg-[#120b06] text-white">
         <div className="absolute inset-0 opacity-22">
-          <img src={`${assetPath}/site-image-1.webp`} alt="" className="h-full w-full object-cover" />
+          <img src={`${assetPath}/site-image-2.webp`} alt="" className="h-full w-full object-cover" />
         </div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_35%,rgba(184,104,34,0.34),transparent_34%),linear-gradient(90deg,rgba(13,7,3,0.98),rgba(22,12,6,0.88),rgba(12,8,5,0.68))]" />
         <div className="absolute inset-0 opacity-35 wood-grain" />
@@ -152,7 +151,7 @@ export default function HomePage() {
               ))}
             </dl>
           </div>
-          <div className="order-1 self-start pt-1 sm:pt-2 lg:order-2 lg:self-center lg:pt-0">
+          <div className="order-1 self-start -translate-y-2 pt-1 sm:-translate-y-4 sm:pt-2 lg:order-2 lg:self-start lg:-translate-y-8 lg:pt-0">
             <AubriesLogo />
           </div>
         </div>
