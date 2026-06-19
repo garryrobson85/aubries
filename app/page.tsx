@@ -110,7 +110,7 @@ export default function HomePage() {
 
       <section id="top" className="relative isolate overflow-hidden bg-[#120b06] text-white">
         <div className="absolute inset-0 opacity-22">
-          <img src={`${assetPath}/site-image-2.webp`} alt="" className="h-full w-full object-cover" />
+          <img src={`${assetPath}/site-image-1.webp`} alt="" className="h-full w-full object-cover" />
         </div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_35%,rgba(184,104,34,0.34),transparent_34%),linear-gradient(90deg,rgba(13,7,3,0.98),rgba(22,12,6,0.88),rgba(12,8,5,0.68))]" />
         <div className="absolute inset-0 opacity-35 wood-grain" />
