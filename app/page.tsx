@@ -76,17 +76,17 @@ const faqs = [
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-[#1c120b] pb-20 pt-[7.65rem] text-[#21160f] md:pb-0 md:pt-[5.3rem]">
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-[#b86822]/50 bg-[#090705]/96 shadow-[0_10px_30px_rgba(0,0,0,0.38)] backdrop-blur">
-        <div className="absolute inset-0 opacity-25 wood-grain" />
+    <main className="min-h-screen overflow-x-hidden bg-[#1c120b] pb-20 pt-[8rem] text-[#21160f] md:pb-0 md:pt-[6rem]">
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-[#b86822]/50 bg-black shadow-[0_10px_30px_rgba(0,0,0,0.38)]">
+        <div className="absolute inset-x-0 bottom-0 h-px bg-[#f97316]/55" />
         <div className="relative mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-2 sm:gap-4 sm:px-8 sm:py-2.5">
           <Link href="#top" className="flex min-w-0 items-center" aria-label="Aubries Handyman and Maintenance home">
             <img
-              src={`${assetPath}/aubries-full-nav-logo-transparent-520.webp`}
+              src={`${assetPath}/aubries-full-nav-logo-black-plate-620.webp`}
               alt="Aubries Handyman and Maintenance"
-              width={520}
-              height={152}
-              className="h-12 w-auto max-w-[13.5rem] shrink-0 object-contain drop-shadow-[0_0_16px_rgba(217,119,6,0.34)] sm:h-16 sm:max-w-[22rem]"
+              width={620}
+              height={169}
+              className="h-[3.25rem] w-auto max-w-[14.9rem] shrink-0 object-contain drop-shadow-[0_0_16px_rgba(217,119,6,0.34)] sm:h-[4.8rem] sm:max-w-[27rem]"
             />
           </Link>
           <nav className="hidden items-center gap-2 text-sm font-bold text-white md:flex">
@@ -104,17 +104,17 @@ export default function HomePage() {
             <span className="sm:hidden">Call</span>
           </Link>
         </div>
-        <nav className="relative mx-auto grid max-w-7xl grid-cols-4 gap-1 border-t border-[#b86822]/25 px-3 pb-2 pt-1.5 text-[0.72rem] font-black uppercase tracking-wide text-white md:hidden">
-          <Link href="#services" className="rounded-full border border-[#f6a03d]/20 bg-[#1b0f08]/80 px-2 py-2 text-center text-white/90 shadow-inner transition active:scale-[0.98]">
+        <nav className="relative mx-auto grid max-w-7xl grid-cols-4 gap-1 border-t border-[#b86822]/35 bg-black px-2 pb-2 pt-1.5 text-[0.73rem] font-black uppercase tracking-normal text-white md:hidden">
+          <Link href="#services" className="rounded-full border border-[#f6a03d]/25 bg-[#1b0f08] px-1.5 py-2.5 text-center text-white/90 shadow-inner transition active:scale-[0.98]">
             Services
           </Link>
-          <Link href="#work" className="rounded-full border border-[#f6a03d]/20 bg-[#1b0f08]/80 px-2 py-2 text-center text-white/90 shadow-inner transition active:scale-[0.98]">
+          <Link href="#work" className="rounded-full border border-[#f6a03d]/25 bg-[#1b0f08] px-1.5 py-2.5 text-center text-white/90 shadow-inner transition active:scale-[0.98]">
             Work
           </Link>
-          <Link href="#mobile-quote" className="rounded-full border border-[#f6a03d]/45 bg-[#f97316] px-2 py-2 text-center text-white shadow-[0_0_18px_rgba(249,115,22,0.28)] transition active:scale-[0.98]">
+          <Link href="#mobile-quote" className="rounded-full border border-[#f6a03d]/45 bg-[#f97316] px-1.5 py-2.5 text-center text-white shadow-[0_0_18px_rgba(249,115,22,0.28)] transition active:scale-[0.98]">
             Quote
           </Link>
-          <Link href="#contact" className="rounded-full border border-[#f6a03d]/20 bg-[#1b0f08]/80 px-2 py-2 text-center text-white/90 shadow-inner transition active:scale-[0.98]">
+          <Link href="#contact" className="rounded-full border border-[#f6a03d]/25 bg-[#1b0f08] px-1.5 py-2.5 text-center text-white/90 shadow-inner transition active:scale-[0.98]">
             Contact
           </Link>
         </nav>
