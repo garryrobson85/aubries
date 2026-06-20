@@ -5,6 +5,7 @@ import {
   Drill,
   Hammer,
   Mail,
+  MessageCircle,
   MapPin,
   Phone,
   PlugZap,
@@ -15,6 +16,7 @@ import {
   Wrench
 } from "lucide-react";
 import { AubriesLogo } from "@/components/aubries-logo";
+import { MobileWhatsAppQuote } from "@/components/mobile-whatsapp-quote";
 
 /* eslint-disable @next/next/no-img-element */
 
@@ -74,7 +76,7 @@ const faqs = [
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-[#1c120b] text-[#21160f]">
+    <main className="min-h-screen overflow-x-hidden bg-[#1c120b] pb-20 text-[#21160f] md:pb-0">
       <header className="sticky top-0 z-40 border-b border-[#b86822]/50 bg-[#090705]/96 shadow-[0_10px_30px_rgba(0,0,0,0.38)] backdrop-blur">
         <div className="absolute inset-0 opacity-25 wood-grain" />
         <div className="relative mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-2 sm:gap-4 sm:px-8 sm:py-2.5">
@@ -114,13 +116,13 @@ export default function HomePage() {
         </div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_35%,rgba(184,104,34,0.34),transparent_34%),linear-gradient(90deg,rgba(13,7,3,0.98),rgba(22,12,6,0.88),rgba(12,8,5,0.68))]" />
         <div className="absolute inset-0 opacity-35 wood-grain" />
-        <div className="relative mx-auto grid min-h-[calc(100svh-64px)] max-w-7xl items-center gap-4 px-6 py-6 sm:px-8 sm:py-10 lg:grid-cols-[1.02fr_0.98fr] lg:gap-8 lg:px-10 lg:py-12">
-          <div className="order-2 max-w-3xl lg:order-1">
+        <div className="relative mx-auto grid min-h-[calc(100svh-64px)] max-w-7xl items-center gap-4 px-4 py-4 sm:px-8 sm:py-10 lg:grid-cols-[1.02fr_0.98fr] lg:gap-8 lg:px-10 lg:py-12">
+          <div className="order-2 max-w-3xl rounded-lg border border-[#f6a03d]/18 bg-black/20 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur-sm sm:border-0 sm:bg-transparent sm:p-0 sm:shadow-none sm:backdrop-blur-0 lg:order-1">
             <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#c9843a]/45 bg-[#2b180d]/80 px-4 py-2 text-xs font-bold text-[#f5c88d] shadow-[inset_0_1px_0_rgba(255,255,255,0.12)] sm:mb-5 sm:text-sm">
               <ShieldCheck size={17} aria-hidden="true" />
               Fully insured handyman services in Upton, Pontefract
             </p>
-            <h1 className="max-w-[12ch] text-4xl font-black leading-[1.02] tracking-normal text-[#fff8ef] sm:text-6xl lg:text-7xl">
+            <h1 className="max-w-[12ch] text-[2.65rem] font-black leading-[1.02] tracking-normal text-[#fff8ef] sm:text-6xl lg:text-7xl">
               Affordable Handyman & Maintenance Services
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-7 text-white/82 sm:mt-6 sm:text-lg sm:leading-8">
@@ -141,6 +143,13 @@ export default function HomePage() {
                 <Mail size={18} aria-hidden="true" />
                 Email Aubries
               </Link>
+              <Link
+                href="#mobile-quote"
+                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-[#f6a03d]/45 bg-[#0f0905]/85 px-6 text-sm font-black uppercase tracking-wide text-white transition active:scale-[0.98] sm:hidden"
+              >
+                <MessageCircle size={18} aria-hidden="true" />
+                WhatsApp Quote
+              </Link>
             </div>
             <dl className="mt-8 grid gap-3 text-sm text-white/85 sm:mt-10 sm:grid-cols-3">
               {["Electrician Services", "Plumbing Solutions", "Home Improvement"].map((item) => (
@@ -157,7 +166,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="services" className="relative border-y border-[#6b3414]/40 bg-[#ead7bd] py-16 sm:py-20">
+      <MobileWhatsAppQuote />
+
+      <section id="services" className="relative border-y border-[#6b3414]/40 bg-[#ead7bd] py-12 sm:py-20">
         <div className="absolute inset-0 opacity-40 wood-grain-light" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
           <div className="grid gap-6 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
@@ -302,6 +313,13 @@ export default function HomePage() {
           </Link>
         </div>
       </section>
+      <Link
+        href="#mobile-quote"
+        className="fixed bottom-3 left-3 right-3 z-50 inline-flex min-h-[3.25rem] items-center justify-center gap-2 rounded-full bg-[#f97316] px-5 text-sm font-black uppercase tracking-wide text-white shadow-[0_18px_36px_rgba(0,0,0,0.35),0_0_26px_rgba(249,115,22,0.28)] ring-1 ring-[#ffd08a]/55 md:hidden"
+      >
+        <MessageCircle size={19} aria-hidden="true" />
+        WhatsApp Quote
+      </Link>
     </main>
   );
 }
