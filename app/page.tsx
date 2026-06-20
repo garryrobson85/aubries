@@ -82,11 +82,11 @@ export default function HomePage() {
         <div className="relative mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-2 sm:gap-4 sm:px-8 sm:py-2.5">
           <Link href="#top" className="flex min-w-0 items-center" aria-label="Aubries Handyman and Maintenance home">
             <img
-              src={`${assetPath}/aubries-full-nav-logo-black-plate-620.webp`}
+              src={`${assetPath}/aubries-full-nav-logo-black-plate-tight-760.webp`}
               alt="Aubries Handyman and Maintenance"
-              width={620}
-              height={169}
-              className="h-[3.25rem] w-auto max-w-[14.9rem] shrink-0 object-contain drop-shadow-[0_0_16px_rgba(217,119,6,0.34)] sm:h-[4.8rem] sm:max-w-[27rem]"
+              width={760}
+              height={212}
+              className="h-[3.35rem] w-auto max-w-[15.25rem] shrink-0 object-contain drop-shadow-[0_0_16px_rgba(217,119,6,0.34)] sm:h-[4.9rem] sm:max-w-[30rem] lg:max-w-[34rem]"
             />
           </Link>
           <nav className="hidden items-center gap-2 text-sm font-bold text-white md:flex">

@@ -46,7 +46,7 @@ export function AubriesLogo() {
   }, [soundOn]);
 
   return (
-    <div className="relative mx-auto h-[21.5rem] w-[21.5rem] sm:h-96 sm:w-96 lg:h-[33.5rem] lg:w-[33.5rem]">
+    <div className="relative mx-auto h-[21.5rem] w-[21.5rem] sm:h-96 sm:w-96 lg:h-[30rem] lg:w-[30rem]">
       <button
         type="button"
         onMouseEnter={playChime}
