@@ -5,7 +5,11 @@ import { FormEvent, useState } from "react";
 
 const whatsappNumber = "447397640534";
 
-export function MobileWhatsAppQuote() {
+type MobileWhatsAppQuoteProps = {
+  sectionId?: string;
+};
+
+export function MobileWhatsAppQuote({ sectionId = "mobile-quote" }: MobileWhatsAppQuoteProps) {
   const [name, setName] = useState("");
   const [area, setArea] = useState("");
   const [service, setService] = useState("Handyman Services");
@@ -28,7 +32,7 @@ export function MobileWhatsAppQuote() {
   }
 
   return (
-    <section id="mobile-quote" className="relative isolate overflow-hidden bg-[#100905] px-4 py-7 text-white md:hidden">
+    <section id={sectionId} className="relative isolate overflow-hidden bg-[#100905] px-4 py-7 text-white md:hidden">
       <div className="absolute inset-0 opacity-30 wood-grain" />
       <div className="relative overflow-hidden rounded-lg border border-[#f6a03d]/35 bg-[#1b0f08] p-4 shadow-[0_18px_40px_rgba(0,0,0,0.34),inset_0_1px_0_rgba(255,255,255,0.12)]">
         <span className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-[#7a421c] via-[#f97316] to-[#7a421c]" />
