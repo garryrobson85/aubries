@@ -80,18 +80,14 @@ export default function HomePage() {
       <header className="fixed inset-x-0 top-0 z-50 border-b border-[#b86822]/50 bg-[#090705]/96 shadow-[0_10px_30px_rgba(0,0,0,0.38)] backdrop-blur">
         <div className="absolute inset-0 opacity-25 wood-grain" />
         <div className="relative mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-2 sm:gap-4 sm:px-8 sm:py-2.5">
-          <Link href="#top" className="flex min-w-0 items-center gap-3" aria-label="Aubries Handyman and Maintenance home">
+          <Link href="#top" className="flex min-w-0 items-center" aria-label="Aubries Handyman and Maintenance home">
             <img
-              src={`${assetPath}/aubries-rustic-logo-header-120.webp`}
+              src={`${assetPath}/aubries-full-nav-logo-transparent-520.webp`}
               alt="Aubries Handyman and Maintenance"
-              width={120}
-              height={117}
-              className="h-14 w-auto object-contain drop-shadow-[0_0_16px_rgba(217,119,6,0.34)] sm:h-16"
+              width={520}
+              height={152}
+              className="h-12 w-auto max-w-[13.5rem] shrink-0 object-contain drop-shadow-[0_0_16px_rgba(217,119,6,0.34)] sm:h-16 sm:max-w-[22rem]"
             />
-            <span className="hidden leading-tight sm:block">
-              <span className="block text-lg font-black uppercase tracking-wide text-[#f6a03d]">Aubries</span>
-              <span className="block text-xs font-bold uppercase tracking-[0.24em] text-[#e8d8c0]">Handyman & Maintenance</span>
-            </span>
           </Link>
           <nav className="hidden items-center gap-2 text-sm font-bold text-white md:flex">
             <Link href="#services" className="rounded-full border border-transparent px-4 py-2 text-white/90 transition hover:border-[#b86822]/60 hover:bg-[#6b3414]/45 hover:text-[#f6a03d]">Services</Link>
@@ -137,7 +133,7 @@ export default function HomePage() {
               Fully insured handyman services in Upton, Pontefract
             </p>
             <h1 className="max-w-[12ch] text-[2.65rem] font-black leading-[1.02] tracking-normal text-[#fff8ef] sm:text-6xl lg:text-7xl">
-              Affordable Handyman & Maintenance Services
+              Affordable Handyman & Maintenance
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-7 text-white/82 sm:mt-6 sm:text-lg sm:leading-8">
               Aubries Handyman & Maintenance provides professional, budget-friendly repairs, plumbing solutions, electrician services and home improvement work with quality service and a personal touch.
@@ -179,8 +175,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      <MobileWhatsAppQuote />
 
       <section id="services" className="relative border-y border-[#6b3414]/40 bg-[#ead7bd] py-12 sm:py-20">
         <div className="absolute inset-0 opacity-40 wood-grain-light" />
@@ -298,7 +292,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <MobileWhatsAppQuote sectionId="mobile-quote-bottom" />
+      <MobileWhatsAppQuote />
 
       <section id="contact" className="relative bg-[#9a4b18] py-14 text-white">
         <div className="absolute inset-0 opacity-25 wood-grain" />
