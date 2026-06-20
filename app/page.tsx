@@ -161,14 +161,6 @@ export default function HomePage() {
                 WhatsApp Quote
               </Link>
             </div>
-            <dl className="mt-8 grid gap-3 text-sm text-white/85 sm:mt-10 sm:grid-cols-3">
-              {["Electrician Services", "Plumbing Solutions", "Home Improvement"].map((item) => (
-                <div key={item} className="rounded-lg border border-[#c9843a]/25 bg-[#1c1008]/72 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
-                  <dt className="font-bold text-white">{item}</dt>
-                  <dd className="mt-1">Reliable, local, affordable.</dd>
-                </div>
-              ))}
-            </dl>
           </div>
           <div className="order-1 self-start -translate-y-2 pt-1 sm:-translate-y-4 sm:pt-2 lg:order-2 lg:self-start lg:-translate-y-8 lg:pt-0">
             <AubriesLogo />
@@ -185,7 +177,7 @@ export default function HomePage() {
               <h2 className="mt-3 text-3xl font-black leading-tight sm:text-5xl">Reliable home repairs without the inflated price tag.</h2>
             </div>
             <p className="max-w-3xl text-lg leading-8 text-black/68">
-              Explore our range of services designed to meet your home improvement needs. We pride ourselves on quality, affordability and sustainability, including reused and repurposed materials where they are suitable for the job.
+              Practical repairs, careful fittings and straight-talking maintenance for homes that need the job done properly. Where it makes sense, Aubries can reuse or repurpose materials to keep costs sensible without cutting corners.
             </p>
           </div>
           <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
@@ -217,10 +209,10 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
             <div>
-              <p className="text-sm font-black uppercase tracking-[0.18em] text-[#f6a03d]">Current Site Imagery</p>
-              <h2 className="mt-3 text-3xl font-black leading-tight sm:text-5xl">Practical work, tidy finishes, useful repairs.</h2>
+              <p className="text-sm font-black uppercase tracking-[0.18em] text-[#f6a03d]">Workshop & Repair Gallery</p>
+              <h2 className="mt-3 text-3xl font-black leading-tight sm:text-5xl">Tool-ready work with tidy, practical finishes.</h2>
               <p className="mt-5 text-lg leading-8 text-white/72">
-                From general maintenance to plumbing, electrical support and home improvement, Aubries focuses on straightforward service, fair pricing and dependable results around Pontefract.
+                From household fixes to plumbing, minor electrical support and home improvements, Aubries brings a local, hands-on service to jobs around Upton, Pontefract and nearby areas.
               </p>
               <div className="mt-8 grid gap-3 text-sm font-bold text-white/76 sm:grid-cols-2">
                 {["Quality services with a personal touch", "Budget-friendly maintenance", "Reused and repurposed materials", "Fully insured local service"].map((item) => (

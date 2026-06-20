@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SiteFeedback } from "@/components/site-feedback";
 import "./globals.css";
 
 const siteUrl = "https://garryrobson85.github.io/aubries";
@@ -167,6 +168,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en-GB">
       <body>
+        <SiteFeedback />
         {children}
         <script
           type="application/ld+json"

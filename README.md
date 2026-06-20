@@ -1,6 +1,6 @@
 # Aubries Handyman & Maintenance Website
 
-A clean Next.js rebuild for Aubries Handyman & Maintenance, using the supplied edited logo, current website imagery, local-business SEO metadata, FAQ schema, service schema, animations and user-triggered logo sound.
+A clean Next.js rebuild for Aubries Handyman & Maintenance, using the finished rustic logo set, local work imagery, local-business SEO metadata, FAQ schema, service schema, animations, subtle button feedback and user-triggered logo sound.
 
 ## GitHub Pages
 
