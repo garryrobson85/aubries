@@ -111,7 +111,7 @@ export default function HomePage() {
           <Link href="#work" className="rounded-full border border-[#f6a03d]/25 bg-[#1b0f08] px-1.5 py-2.5 text-center text-white/90 shadow-inner transition active:scale-[0.98]">
             Work
           </Link>
-          <Link href="#mobile-quote" className="rounded-full border border-[#f6a03d]/45 bg-[#f97316] px-1.5 py-2.5 text-center text-white shadow-[0_0_18px_rgba(249,115,22,0.28)] transition active:scale-[0.98]">
+          <Link href="#mobile-quote" className="rounded-full border border-[#f6a03d]/25 bg-[#1b0f08] px-1.5 py-2.5 text-center text-white/90 shadow-inner transition active:scale-[0.98] active:border-[#f6a03d]/55 active:bg-[#f97316] active:text-white active:shadow-[0_0_18px_rgba(249,115,22,0.28)]">
             Quote
           </Link>
           <Link href="#contact" className="rounded-full border border-[#f6a03d]/25 bg-[#1b0f08] px-1.5 py-2.5 text-center text-white/90 shadow-inner transition active:scale-[0.98]">
